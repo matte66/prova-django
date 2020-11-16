@@ -5,6 +5,12 @@
     <title>Prova Blog</title>
 </head>
 <body>
-    <h1>Ciao</h1>
+    {% for post in posts %}
+        <div>
+            <h1><a href="">{{ post.titolo }}</a></h1>
+            <p>Pubblicato: {{ post.pubblicaData }}</p>
+            <p>{{ post.testo|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
 </body>
 </html>
